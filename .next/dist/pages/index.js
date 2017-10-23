@@ -4,101 +4,86 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _regenerator = require('babel-runtime/regenerator');
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
-var _regenerator2 = _interopRequireDefault(_regenerator);
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
 
-var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _MyLayout = require('../components/MyLayout.js');
+var _reactDom = require('react-dom');
 
-var _MyLayout2 = _interopRequireDefault(_MyLayout);
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _link = require('next/dist/lib/link.js');
-
-var _link2 = _interopRequireDefault(_link);
-
-var _isomorphicUnfetch = require('isomorphic-unfetch');
-
-var _isomorphicUnfetch2 = _interopRequireDefault(_isomorphicUnfetch);
+var _antd = require('antd');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/utouu-imac/Documents/GIT/MaoBlogNext/pages/index.js?entry';
+var _jsxFileName = '/Users/jackwang/Documents/github/MaoBlogNext/pages/index.js?entry';
 
 
-var Index = function Index(props) {
-  return _react2.default.createElement(_MyLayout2.default, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
+var Index = function (_React$Component) {
+  (0, _inherits3.default)(Index, _React$Component);
+
+  function Index(props) {
+    (0, _classCallCheck3.default)(this, Index);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Index.__proto__ || (0, _getPrototypeOf2.default)(Index)).call(this, props));
+
+    _this.state = {
+      date: ''
+    };
+    return _this;
+  }
+
+  (0, _createClass3.default)(Index, [{
+    key: 'handleChange',
+    value: function handleChange(date) {
+      _antd.message.info('您选择的日期是: ' + date.toString());
+      this.setState({ date: date });
     }
-  }, _react2.default.createElement('h1', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement('div', { style: { width: 400, margin: '100px auto' }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        }
+      }, _react2.default.createElement(_antd.DatePicker, { onChange: function onChange(value) {
+          return _this2.handleChange(value);
+        }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        }
+      }), _react2.default.createElement('div', { style: { marginTop: 20 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        }
+      }, '\u5F53\u524D\u65E5\u671F\uFF1A', this.state.date.toString()));
     }
-  }, 'Batman TV Shows'), _react2.default.createElement('ul', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    }
-  }, props.shows.map(function (_ref) {
-    var show = _ref.show;
-    return _react2.default.createElement('li', { key: show.id, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      }
-    }, _react2.default.createElement(_link2.default, { as: '/p/' + show.id,
-      href: '/post?id=' + show.id, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11
-      }
-    }, _react2.default.createElement('a', {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      }
-    }, show.name)));
-  })));
-};
+  }]);
 
-Index.getInitialProps = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
-  var res, data;
-  return _regenerator2.default.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return (0, _isomorphicUnfetch2.default)('https://api.tvmaze.com/search/shows?q=batman');
-
-        case 2:
-          res = _context.sent;
-          _context.next = 5;
-          return res.json();
-
-        case 5:
-          data = _context.sent;
-
-          console.log('Show data fetched. Count: ' + data.length);
-
-          return _context.abrupt('return', {
-            shows: data
-          });
-
-        case 8:
-        case 'end':
-          return _context.stop();
-      }
-    }
-  }, _callee, this);
-}));
+  return Index;
+}(_react2.default.Component);
 
 exports.default = Index;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIkxheW91dCIsIkxpbmsiLCJmZXRjaCIsIkluZGV4IiwicHJvcHMiLCJzaG93cyIsIm1hcCIsInNob3ciLCJpZCIsIm5hbWUiLCJnZXRJbml0aWFsUHJvcHMiLCJyZXMiLCJqc29uIiwiZGF0YSIsImNvbnNvbGUiLCJsb2ciLCJsZW5ndGgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBWTs7OztBQUNuQixBQUFPOzs7O0FBQ1AsQUFBTzs7Ozs7Ozs7O0FBRVAsSUFBTSxRQUFRLFNBQVIsQUFBUSxNQUFBLEFBQUMsT0FBRDt5QkFDWixBQUFDOztnQkFBRDtrQkFBQSxBQUNFO0FBREY7QUFBQSxHQUFBLGtCQUNFLGNBQUE7O2dCQUFBO2tCQUFBO0FBQUE7QUFBQSxLQURGLEFBQ0UsQUFDQSxvQ0FBQSxjQUFBOztnQkFBQTtrQkFBQSxBQUNHO0FBREg7QUFBQSxXQUNHLEFBQU0sTUFBTixBQUFZLElBQUksZ0JBQUE7UUFBQSxBQUFFLFlBQUYsQUFBRTsyQkFDakIsY0FBQSxRQUFJLEtBQUssS0FBVCxBQUFjO2tCQUFkO29CQUFBLEFBQ0U7QUFERjtLQUFBLGtCQUNFLEFBQUMsZ0NBQUssWUFBVSxLQUFoQixBQUFxQixBQUNuQjswQkFBa0IsS0FEcEIsQUFDeUI7a0JBRHpCO29CQUFBLEFBRUU7QUFGRjt1QkFFRSxjQUFBOztrQkFBQTtvQkFBQSxBQUFJO0FBQUo7QUFBQSxZQUpXLEFBQ2YsQUFDRSxBQUVFLEFBQVM7QUFSUCxBQUNaLEFBRUUsQUFDRztBQUpQOztBQWdCQSxNQUFBLEFBQU0sMkZBQWtCLG1CQUFBO1dBQUE7Z0VBQUE7Y0FBQTt1Q0FBQTthQUFBOzBCQUFBO2lCQUNKLGlDQURJLEFBQ0osQUFBTTs7YUFBbEI7QUFEZ0IseUJBQUE7MEJBQUE7aUJBRUgsSUFGRyxBQUVILEFBQUk7O2FBQWpCO0FBRmdCLDBCQUl0Qjs7a0JBQUEsQUFBUSxtQ0FBaUMsS0FKbkIsQUFJdEIsQUFBOEM7OzttQkFKeEIsQUFNZixBQUNFO0FBREYsQUFDTDs7YUFQb0I7YUFBQTswQkFBQTs7QUFBQTtjQUFBO0FBQXhCLEFBV0E7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL3V0b3V1LWltYWMvRG9jdW1lbnRzL0dJVC9NYW9CbG9nTmV4dCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiUmVhY3RET00iLCJEYXRlUGlja2VyIiwibWVzc2FnZSIsIkluZGV4IiwicHJvcHMiLCJzdGF0ZSIsImRhdGUiLCJpbmZvIiwidG9TdHJpbmciLCJzZXRTdGF0ZSIsIndpZHRoIiwibWFyZ2luIiwiaGFuZGxlQ2hhbmdlIiwidmFsdWUiLCJtYXJnaW5Ub3AiLCJDb21wb25lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTzs7OztBQUNQLEFBQU87Ozs7QUFDUCxBQUFTLEFBQVk7Ozs7Ozs7SSxBQUVmO2lDQUNKOztpQkFBQSxBQUFZLE9BQU87d0NBQUE7O29JQUFBLEFBQ1gsQUFDTjs7VUFBQSxBQUFLO1lBRlksQUFFakIsQUFBYSxBQUNMO0FBREssQUFDWDtXQUVIOzs7OztpQ0FDWSxBLE1BQU0sQUFDakI7b0JBQUEsQUFBUSxLQUFLLGNBQWMsS0FBM0IsQUFBMkIsQUFBSyxBQUNoQztXQUFBLEFBQUssU0FBUyxFQUFFLE1BQWhCLEFBQWMsQUFDZjs7Ozs2QkFDUTttQkFDUDs7NkJBQ0UsY0FBQSxTQUFLLE9BQU8sRUFBRSxPQUFGLEFBQVMsS0FBSyxRQUExQixBQUFZLEFBQXNCO29CQUFsQztzQkFBQSxBQUNFO0FBREY7T0FBQSxrQkFDRSxBQUFDLGtDQUFXLFVBQVUseUJBQUE7aUJBQVMsT0FBQSxBQUFLLGFBQWQsQUFBUyxBQUFrQjtBQUFqRDtvQkFBQTtzQkFERixBQUNFLEFBQ0E7QUFEQTswQkFDQSxjQUFBLFNBQUssT0FBTyxFQUFFLFdBQWQsQUFBWSxBQUFhO29CQUF6QjtzQkFBQTtBQUFBO1NBQXFDLHVDQUFBLEFBQUssTUFBTCxBQUFXLEtBSHBELEFBQ0UsQUFFRSxBQUFxQyxBQUFnQixBQUcxRDs7Ozs7RUFsQmlCLGdCQUFNLEEsQUFxQjFCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9qYWNrd2FuZy9Eb2N1bWVudHMvZ2l0aHViL01hb0Jsb2dOZXh0In0=
