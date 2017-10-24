@@ -2,10 +2,15 @@ const path = require('path')
 const glob = require('glob')
 
 module.exports = {
-  webpack: (config, { dev }) => {
+  exportPathMap: function () {
+    return {
+      '/': { page: '/' }
+    }
+  },
+  webpack: function (config, { dev }) {
     config.module.rules.push(
       {
-        test: /\.(css|less)/,
+        test: /\.(css|scss)/,
         loader: 'emit-file-loader',
         options: {
           name: 'dist/[path][name].[ext]'
@@ -14,37 +19,28 @@ module.exports = {
     ,
       {
         test: /\.css$/,
-        use: ['babel-loader', 'raw-loader', 'less-loader']
+        use: ['babel-loader', 'raw-loader', 'postcss-loader']
       }
     ,
-    //   {
-    //     test: /\.s(a|c)ss$/,
-    //     use: ['babel-loader', 'raw-loader',
-    //       { loader: 'sass-loader',
-    //         options: {
-    //           includePaths: ['styles', 'node_modules']
-    //             .map((d) => path.join(__dirname, d))
-    //             .map((g) => glob.sync(g))
-    //             .reduce((a, c) => a.concat(c), [])
-    //         }
-    //       }
-    //     ]
-    //   },
+      {
+        test: /\.s(a|c)ss$/,
+        use: ['babel-loader', 'raw-loader', 'postcss-loader',
+          { loader: 'sass-loader',
+            options: {
+              includePaths: ['styles', 'node_modules']
+                .map((d) => path.join(__dirname, d))
+                .map((g) => glob.sync(g))
+                .reduce((a, c) => a.concat(c), [])
+            }
+          }
+        ]
+      },
       {
         test: /\.less$/,
-        use: [{
-            loader: "style-loader"
-        }, {
-            loader: "css-loader"
-        }, {
-            loader: "less-loader", options: {
-                paths: [
-                    path.resolve(__dirname, "node_modules")
-                ]
-            }
-        }]
+        use: ["style-loader", {loader: 'css-loader', options: {sourceMap: 1}}, "postcss-loader", "less-loader"]
     }
     )
+
     return config
   }
 }

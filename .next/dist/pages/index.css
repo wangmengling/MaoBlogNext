@@ -1,7 +1,0 @@
-;
-
-(function () {
-  "use strict";
-
-  module.exports = ".DatePic {\n  background-color: blueviolet;\n  color: red;\n  font-size: 30px;\n}\n";
-})();

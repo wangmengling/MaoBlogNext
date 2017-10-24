@@ -1,6 +1,6 @@
-// import Layout from '../components/MyLayout.js'
-// import Link from 'next/link'
-// import fetch from 'isomorphic-unfetch'
+import Layout from '../components/MyLayout.js'
+import Link from 'next/link'
+import fetch from 'isomorphic-unfetch'
 
 // const Index = (props) => (
 //   <Layout>
@@ -33,9 +33,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { DatePicker, message } from 'antd';
 // import 'antd/dist/antd.css';
-// import 'antd/lib/date-picker/style/css';
-// import stylesheet from 'styles/index.scss'
-import "./index.css";
 class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -49,10 +46,12 @@ class Index extends React.Component {
   }
   render() {
     return (
-      <div style={{ width: 400, margin: '100px auto' }} className="DatePic">
-        <DatePicker onChange={value => this.handleChange(value)} />
-        <div style={{ marginTop: 20 }} className="DatePic">当前日期：{this.state.date.toString()}</div>
-      </div>
+      <Layout>
+        <div style={{ width: 400, margin: '100px auto' }} className="DatePic">
+          <DatePicker onChange={value => this.handleChange(value)} />
+          <div style={{ marginTop: 20 }} className="DatePic">当前日期sss：{this.state.date.toString()}</div>
+        </div>
+      </Layout>
     );
   }
 }

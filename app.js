@@ -12,9 +12,16 @@ app.prepare()
   const server = new Koa()
   const router = new Router()
 
-  router.get('/a', async ctx => {
-    await app.render(ctx.req, ctx.res, '/b', ctx.query)
+  router.get('/about', async ctx => {
+    console.log("------");
+    await app.render(ctx.req, ctx.res, '/about', ctx.query)
     ctx.respond = false
+  })
+
+  router.get('/', async ctx => {
+    console.log("------sss");
+    await app.render(ctx.req, ctx.res, '/', ctx.query)
+    ctx.respond = true
   })
 
   router.get('/b', async ctx => {
@@ -23,6 +30,7 @@ app.prepare()
   })
 
   router.get('*', async ctx => {
+    
     await handle(ctx.req, ctx.res)
     ctx.respond = false
   })
