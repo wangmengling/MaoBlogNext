@@ -49,7 +49,7 @@ class Index extends React.Component {
       <Layout>
         <div style={{ width: 400, margin: '100px auto' }} className="DatePic">
           <DatePicker onChange={value => this.handleChange(value)} />
-          <div style={{ marginTop: 20 }} className="DatePic">当前日期sss：{this.state.date.toString()}</div>
+          <div style={{ marginTop: 20 }} className="DatePic">当前日期ssssss：{this.state.date.toString()}</div>
         </div>
       </Layout>
     );
