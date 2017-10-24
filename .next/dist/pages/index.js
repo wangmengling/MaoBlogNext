@@ -4,126 +4,128 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _regenerator = require('babel-runtime/regenerator');
+var _datePicker = require('antd/lib/date-picker');
 
-var _regenerator2 = _interopRequireDefault(_regenerator);
+var _datePicker2 = _interopRequireDefault(_datePicker);
 
-var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
+var _message2 = require('antd/lib/message');
 
-var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+var _message3 = _interopRequireDefault(_message2);
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _MyLayout = require('../components/MyLayout.js');
+var _reactDom = require('react-dom');
 
-var _MyLayout2 = _interopRequireDefault(_MyLayout);
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _link = require('next/dist/lib/link.js');
-
-var _link2 = _interopRequireDefault(_link);
-
-var _isomorphicUnfetch = require('isomorphic-unfetch');
-
-var _isomorphicUnfetch2 = _interopRequireDefault(_isomorphicUnfetch);
+require('./index.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/jackwang/Documents/github/MaoBlogNext/pages/index.js?entry';
+var _jsxFileName = '/Users/utouu-imac/Documents/GIT/MaoBlogNext/pages/index.js?entry';
+// import Layout from '../components/MyLayout.js'
+// import Link from 'next/link'
+// import fetch from 'isomorphic-unfetch'
 
+// const Index = (props) => (
+//   <Layout>
+//     <h1>Batman TV Shows</h1>
+//     <ul>
+//       {props.shows.map(({show}) => (
+//         <li key={show.id}>
+//           <Link as={`/p/${show.id}`} 
+//             href={`/post?id=${show.id}`}>
+//             <a>{show.name}</a>
+//           </Link>
+//         </li>
+//       ))}
+//     </ul>
+//   </Layout>
+// )
 
-var Index = function Index(props) {
-  return _react2.default.createElement(_MyLayout2.default, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    }
-  }, _react2.default.createElement('h1', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    }
-  }, 'Batman TV Shows'), _react2.default.createElement('ul', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    }
-  }, props.shows.map(function (_ref) {
-    var show = _ref.show;
-    return _react2.default.createElement('li', { key: show.id, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      }
-    }, _react2.default.createElement(_link2.default, { as: '/p/' + show.id,
-      href: '/post?id=' + show.id, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11
-      }
-    }, _react2.default.createElement('a', {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      }
-    }, show.name)));
-  })));
-};
+// Index.getInitialProps = async function() {
+//   const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+//   const data = await res.json()
 
-Index.getInitialProps = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
-  var res, data;
-  return _regenerator2.default.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return (0, _isomorphicUnfetch2.default)('https://api.tvmaze.com/search/shows?q=batman');
+//   console.log(`Show data fetched. Count: ${data.length}`)
 
-        case 2:
-          res = _context.sent;
-          _context.next = 5;
-          return res.json();
-
-        case 5:
-          data = _context.sent;
-
-          console.log('Show data fetched. Count: ' + data.length);
-
-          return _context.abrupt('return', {
-            shows: data
-          });
-
-        case 8:
-        case 'end':
-          return _context.stop();
-      }
-    }
-  }, _callee, this);
-}));
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import { DatePicker, message } from 'antd';
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       date: '',
-//     };
-//   }
-//   handleChange(date) {
-//     message.info('您选择的日期是: ' + date.toString());
-//     this.setState({ date });
-//   }
-//   render() {
-//     return (
-//       <div style={{ width: 400, margin: '100px auto' }}>
-//         <DatePicker onChange={value => this.handleChange(value)} />
-//         <div style={{ marginTop: 20 }}>当前日期：{this.state.date.toString()}</div>
-//       </div>
-//     );
+//   return {
+//     shows: data
 //   }
 // }
 
+// import 'antd/dist/antd.css';
+// import 'antd/lib/date-picker/style/css';
+// import stylesheet from 'styles/index.scss'
+
+
+var Index = function (_React$Component) {
+  (0, _inherits3.default)(Index, _React$Component);
+
+  function Index(props) {
+    (0, _classCallCheck3.default)(this, Index);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Index.__proto__ || (0, _getPrototypeOf2.default)(Index)).call(this, props));
+
+    _this.state = {
+      date: ''
+    };
+    return _this;
+  }
+
+  (0, _createClass3.default)(Index, [{
+    key: 'handleChange',
+    value: function handleChange(date) {
+      _message3.default.info('您选择的日期是: ' + date.toString());
+      this.setState({ date: date });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement('div', { style: { width: 400, margin: '100px auto' }, className: 'DatePic', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        }
+      }, _react2.default.createElement(_datePicker2.default, { onChange: function onChange(value) {
+          return _this2.handleChange(value);
+        }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        }
+      }), _react2.default.createElement('div', { style: { marginTop: 20 }, className: 'DatePic', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        }
+      }, '\u5F53\u524D\u65E5\u671F\uFF1A', this.state.date.toString()));
+    }
+  }]);
+
+  return Index;
+}(_react2.default.Component);
+
 exports.default = Index;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIkxheW91dCIsIkxpbmsiLCJmZXRjaCIsIkluZGV4IiwicHJvcHMiLCJzaG93cyIsIm1hcCIsInNob3ciLCJpZCIsIm5hbWUiLCJnZXRJbml0aWFsUHJvcHMiLCJyZXMiLCJqc29uIiwiZGF0YSIsImNvbnNvbGUiLCJsb2ciLCJsZW5ndGgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBWTs7OztBQUNuQixBQUFPOzs7O0FBQ1AsQUFBTzs7Ozs7Ozs7O0FBRVAsSUFBTSxRQUFRLFNBQVIsQUFBUSxNQUFBLEFBQUMsT0FBRDt5QkFDWixBQUFDOztnQkFBRDtrQkFBQSxBQUNFO0FBREY7QUFBQSxHQUFBLGtCQUNFLGNBQUE7O2dCQUFBO2tCQUFBO0FBQUE7QUFBQSxLQURGLEFBQ0UsQUFDQSxvQ0FBQSxjQUFBOztnQkFBQTtrQkFBQSxBQUNHO0FBREg7QUFBQSxXQUNHLEFBQU0sTUFBTixBQUFZLElBQUksZ0JBQUE7UUFBQSxBQUFFLFlBQUYsQUFBRTsyQkFDakIsY0FBQSxRQUFJLEtBQUssS0FBVCxBQUFjO2tCQUFkO29CQUFBLEFBQ0U7QUFERjtLQUFBLGtCQUNFLEFBQUMsZ0NBQUssWUFBVSxLQUFoQixBQUFxQixBQUNuQjswQkFBa0IsS0FEcEIsQUFDeUI7a0JBRHpCO29CQUFBLEFBRUU7QUFGRjt1QkFFRSxjQUFBOztrQkFBQTtvQkFBQSxBQUFJO0FBQUo7QUFBQSxZQUpXLEFBQ2YsQUFDRSxBQUVFLEFBQVM7QUFSUCxBQUNaLEFBRUUsQUFDRztBQUpQOztBQWdCQSxNQUFBLEFBQU0sMkZBQWtCLG1CQUFBO1dBQUE7Z0VBQUE7Y0FBQTt1Q0FBQTthQUFBOzBCQUFBO2lCQUNKLGlDQURJLEFBQ0osQUFBTTs7YUFBbEI7QUFEZ0IseUJBQUE7MEJBQUE7aUJBRUgsSUFGRyxBQUVILEFBQUk7O2FBQWpCO0FBRmdCLDBCQUl0Qjs7a0JBQUEsQUFBUSxtQ0FBaUMsS0FKbkIsQUFJdEIsQUFBOEM7OzttQkFKeEIsQUFNZixBQUNFO0FBREYsQUFDTDs7YUFQb0I7YUFBQTswQkFBQTs7QUFBQTtjQUFBO0FBQXhCOztBQVdBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEFBRUE7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL2phY2t3YW5nL0RvY3VtZW50cy9naXRodWIvTWFvQmxvZ05leHQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiUmVhY3RET00iLCJJbmRleCIsInByb3BzIiwic3RhdGUiLCJkYXRlIiwiaW5mbyIsInRvU3RyaW5nIiwic2V0U3RhdGUiLCJ3aWR0aCIsIm1hcmdpbiIsImhhbmRsZUNoYW5nZSIsInZhbHVlIiwibWFyZ2luVG9wIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBK0JBLEFBQU87Ozs7QUFDUCxBQUFPOzs7O0FBS1AsQUFBTzs7Ozs7QUFyQ1A7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBS0E7QUFDQTtBQUNBOzs7SSxBQUVNO2lDQUNKOztpQkFBQSxBQUFZLE9BQU87d0NBQUE7O29JQUFBLEFBQ1gsQUFDTjs7VUFBQSxBQUFLO1lBRlksQUFFakIsQUFBYSxBQUNMO0FBREssQUFDWDtXQUVIOzs7OztpQyxBQUNZLE1BQU0sQUFDakI7d0JBQUEsQUFBUSxLQUFLLGNBQWMsS0FBM0IsQUFBMkIsQUFBSyxBQUNoQztXQUFBLEFBQUssU0FBUyxFQUFFLE1BQWhCLEFBQWMsQUFDZjs7Ozs2QkFDUTttQkFDUDs7NkJBQ0UsY0FBQSxTQUFLLE9BQU8sRUFBRSxPQUFGLEFBQVMsS0FBSyxRQUExQixBQUFZLEFBQXNCLGdCQUFnQixXQUFsRCxBQUE0RDtvQkFBNUQ7c0JBQUEsQUFDRTtBQURGO09BQUEsd0RBQ2MsVUFBVSx5QkFBQTtpQkFBUyxPQUFBLEFBQUssYUFBZCxBQUFTLEFBQWtCO0FBQWpEO29CQUFBO3NCQURGLEFBQ0UsQUFDQTtBQURBOzBCQUNBLGNBQUEsU0FBSyxPQUFPLEVBQUUsV0FBZCxBQUFZLEFBQWEsTUFBTSxXQUEvQixBQUF5QztvQkFBekM7c0JBQUE7QUFBQTtTQUF5RCx1Q0FBQSxBQUFLLE1BQUwsQUFBVyxLQUh4RSxBQUNFLEFBRUUsQUFBeUQsQUFBZ0IsQUFHOUU7Ozs7O0VBbEJpQixnQkFBTSxBLEFBcUIxQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvdXRvdXUtaW1hYy9Eb2N1bWVudHMvR0lUL01hb0Jsb2dOZXh0In0=
