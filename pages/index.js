@@ -35,7 +35,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { DatePicker, message } from 'antd';
 // import 'antd/dist/antd.css';
-import "styles/about.scss";
+import aboutScss from "styles/about.scss";
+
 class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +51,7 @@ class Index extends React.Component {
   render() {
     return (
       <MyLayout>
+        <style dangerouslySetInnerHTML={{ __html: aboutScss }} />
           <Breadcrumb style={{ margin: '12px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
