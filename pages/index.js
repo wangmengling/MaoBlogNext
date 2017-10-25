@@ -1,6 +1,8 @@
-import Layout from '../components/MyLayout.js'
+import MyLayout from '../components/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import {Breadcrumb} from 'antd'
+// import  "./index.scss"
 
 // const Index = (props) => (
 //   <Layout>
@@ -33,6 +35,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { DatePicker, message } from 'antd';
 // import 'antd/dist/antd.css';
+import "styles/about.scss";
 class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -46,12 +49,14 @@ class Index extends React.Component {
   }
   render() {
     return (
-      <Layout>
-        <div style={{ width: 400, margin: '100px auto' }} className="DatePic">
-          <DatePicker onChange={value => this.handleChange(value)} />
-          <div style={{ marginTop: 20 }} className="DatePic">当前日期ssssss：{this.state.date.toString()}</div>
-        </div>
-      </Layout>
+      <MyLayout>
+          <Breadcrumb style={{ margin: '12px 0' }}>
+          <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item>List</Breadcrumb.Item>
+          <Breadcrumb.Item>App</Breadcrumb.Item>
+        </Breadcrumb>
+      <div style={{ background: '#fff', padding: 24, minHeight: 880 }} className="DatePic">Content</div>
+      </MyLayout>
     );
   }
 }
