@@ -44,7 +44,7 @@ var Head = function Head() {
       lineNumber: 8
     }
   }), _react2.default.createElement(_menu2.default, {
-    theme: 'dark',
+    theme: 'light',
     mode: 'horizontal',
     defaultSelectedKeys: ['2'],
     style: { lineHeight: '64px', alignContent: 'right' },

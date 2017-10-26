@@ -33,9 +33,9 @@ import {Breadcrumb} from 'antd'
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DatePicker, message } from 'antd';
+import { DatePicker, message, Button, Icon } from 'antd';
 // import 'antd/dist/antd.css';
-import aboutScss from "styles/about.scss";
+import indexScss from "styles/index.scss";
 
 class Index extends React.Component {
   constructor(props) {
@@ -51,13 +51,64 @@ class Index extends React.Component {
   render() {
     return (
       <MyLayout>
-        <style dangerouslySetInnerHTML={{ __html: aboutScss }} />
-          <Breadcrumb style={{ margin: '12px 0' }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
-      <div style={{ background: '#fff', padding: 24, minHeight: 880 }} className="DatePic">Content</div>
+        <style dangerouslySetInnerHTML={{ __html: indexScss }} />
+        <div style={{ background: '#fff', padding: 0, minHeight: 880 }} className="AllContent">
+          <div className="ResumeContent">
+              <div className="RightIcon">
+                {/* <Icon type="bars" /> */}
+                <Button icon="bars" />
+              </div>
+              <div className="HeaderIcon">
+                 <img src="./static/images/index/top.jpg" />
+              </div>
+              <div className="FullStackEngineer">
+                Full Stack Engineer
+              </div>
+              <div className="Motto">
+              The Harder The More Fortunate
+              </div>
+              <div>
+              <Button type="primary" icon="download" size="default" className="DownLoadButton">Download My Resume</Button>
+              </div>
+          </div>
+          <div className="MySkills"> 
+            <div className="Title">
+              MY SKILLS
+            </div>
+            <div className="Line">
+              <div className="LineLeft"></div>
+              <Icon type="tool" className="LineIcon" />
+              <div className="LineRight"></div>
+            </div>
+            <div className="SkillCategory">
+                <div>
+                  <div>移动端</div>
+                  <div>
+                      Ios，Android
+                  </div>
+                </div>
+                  
+                <div>
+                <div>服务端</div>
+                  <div>
+                      Nodejs,PHP
+                  </div>
+                </div>
+                <div>
+                <div>前端</div>
+                  <div>
+                      React,Vue,CSS,HTML5
+                  </div>
+                </div>
+                <div>
+                  <div>人工智能</div>
+                  <div>
+                      Learning
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
       </MyLayout>
     );
   }

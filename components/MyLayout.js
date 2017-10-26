@@ -1,8 +1,6 @@
 import Head from './Head'
 import antdStyle from 'antd/dist/antd.css'
 import fontawesomeStyle from 'font-awesome/css/font-awesome.css'
-import stylesheet from 'styles/index.scss'
-
 import { Layout, Menu, Breadcrumb } from 'antd';
 const { Header, Content, Footer } = Layout;
 
@@ -18,9 +16,8 @@ const MyLayout = (props) => (
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <style dangerouslySetInnerHTML={{ __html: antdStyle }} />
       <style dangerouslySetInnerHTML={{ __html: fontawesomeStyle }} />
-      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    <Head />
-    <Content style={{ padding: '0 50px' }}>
+    {/* <Head /> */}
+    <Content style={{ padding: '0 0px' }}>
       {props.children}
     </Content>
     <Footer style={{ textAlign: 'center' }}>

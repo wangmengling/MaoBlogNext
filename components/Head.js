@@ -7,7 +7,7 @@ const Head = () => (
     <Header>
     <div className="logo" />
     <Menu
-      theme="dark"
+      theme="light"
       mode="horizontal"
       defaultSelectedKeys={['2']}
       style={{ lineHeight: '64px' ,alignContent:'right'}}
