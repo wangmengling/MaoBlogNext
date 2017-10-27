@@ -130,11 +130,30 @@ class Index extends React.Component {
 
             <div className="ContactMeWay">
                 <div className="ContactMeBlock">
-                <div className="Title">人工智能</div>
-                  <div  className="Language">
-                    <div  className="LanguageCategory">
-                      <div><Icon type="address" className="LineIcon" /></div>
-                      <div className="LanguageTitle">Python</div><div className="LanguageDetail">Learning</div></div>
+                  <div><Icon type="environment-o" className="ContactMeIcon" /></div>
+                  <div className="ContactMeTitle">ADDRESS</div>
+                  <div  className="ContactMeLine">
+                  </div>
+                  <div  className="ContactMeDetail">
+                    四川省-成都市-高新区-天府三街
+                  </div>
+                </div>
+                <div className="ContactMeBlock">
+                  <div><Icon type="mobile" className="ContactMeIcon" /></div>
+                  <div className="ContactMeTitle">PHONE</div>
+                  <div  className="ContactMeLine">
+                  </div>
+                  <div  className="ContactMeDetail">
+                    15828581089
+                  </div>
+                </div>
+                <div className="ContactMeBlock">
+                  <div><Icon type="mail" className="ContactMeIcon" /></div>
+                  <div className="ContactMeTitle">EMAIL</div>
+                  <div  className="ContactMeLine">
+                  </div>
+                  <div  className="ContactMeDetail">
+                    294025529@qq.com
                   </div>
                 </div>
             </div>
