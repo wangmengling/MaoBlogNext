@@ -81,29 +81,60 @@ class Index extends React.Component {
               <div className="LineRight"></div>
             </div>
             <div className="SkillCategory">
-                <div>
-                  <div>移动端</div>
-                  <div>
-                      Ios，Android
+                <div className="CategoryBlock">
+                  <div className="Title">移动端</div>
+                  <div className="Language">
+                    <div className="LanguageCategory">
+                      <div className="LanguageTitle">IOS</div>
+                      <div className="LanguageDetail">5年IOS开发经验，熟悉Swift，Objective-C语言开发</div>
+                    </div>
+                    <div className="LanguageCategory"><div className="LanguageTitle">Android</div><div className="LanguageDetail">Learning</div></div>
+                    <div className="LanguageCategory"><div className="LanguageTitle">RN</div><div className="LanguageDetail">对ReactNative开发移动端有一定经验</div></div>
                   </div>
                 </div>
                   
-                <div>
-                <div>服务端</div>
-                  <div>
-                      Nodejs,PHP
+                <div className="CategoryBlock">
+                <div className="Title">服务端</div>
+                  <div  className="Language">
+                    <div className="LanguageCategory"><div className="LanguageTitle">Nodejs</div><div className="LanguageDetail">熟悉Express，Koa等框架</div></div>
+                    <div className="LanguageCategory"><div className="LanguageTitle">PHP</div><div className="LanguageDetail">3年PHP开发经验（已弃坑）</div></div>
                   </div>
                 </div>
-                <div>
-                <div>前端</div>
-                  <div>
-                      React,Vue,CSS,HTML5
+                <div className="CategoryBlock">
+                <div className="Title">前端</div>
+                  <div  className="Language">
+                    <div className="LanguageCategory"><div className="LanguageTitle">React</div><div className="LanguageDetail">熟悉Mobx架构</div></div>
+                    <div className="LanguageCategory"><div className="LanguageTitle">Vue</div><div className="LanguageDetail">Learning</div></div>
+                    <div className="LanguageCategory"><div className="LanguageTitle">CSS</div><div className="LanguageDetail">1：熟悉CSS3 2:熟悉CSS框架 bluma ，antd</div></div>
+                    {/* <div className="LanguageCategory"><div className="LanguageTitle">HTML5</div><div className="LanguageDetail">HTML5</div></div> */}
+                    
                   </div>
                 </div>
-                <div>
-                  <div>人工智能</div>
-                  <div>
-                      Learning
+                <div className="CategoryBlock">
+                  <div className="Title">人工智能</div>
+                  <div  className="Language">
+                    <div  className="LanguageCategory"><div className="LanguageTitle">Python</div><div className="LanguageDetail">Learning</div></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div className="ContactMe">
+            <div className="Title">
+              My Contact Way
+            </div>
+            <div className="Line">
+              <div className="LineLeft"></div>
+              <Icon type="message" className="LineIcon" />
+              <div className="LineRight"></div>
+            </div>
+
+            <div className="ContactMeWay">
+                <div className="ContactMeBlock">
+                <div className="Title">人工智能</div>
+                  <div  className="Language">
+                    <div  className="LanguageCategory">
+                      <div><Icon type="address" className="LineIcon" /></div>
+                      <div className="LanguageTitle">Python</div><div className="LanguageDetail">Learning</div></div>
                   </div>
                 </div>
             </div>
