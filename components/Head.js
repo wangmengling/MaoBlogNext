@@ -4,7 +4,7 @@ const { Header, Content, Footer } = Layout;
 
 const Head = () => (
   <div>
-    <Header>
+    <Header style={{backgroundColor:'#fff'}}>
     <div className="logo" />
     <Menu
       theme="light"

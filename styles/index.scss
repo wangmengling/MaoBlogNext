@@ -225,4 +225,25 @@
             }
         }
     }
+
+    .MyResume {
+        display: flex;
+        justify-content: center;
+        background-color: #f7f7f7;
+        .MyResumeCotent{
+            width: 80%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    .RecommendedArticle {
+        display: flex;
+        justify-content: center;
+        background-color: #f7f7f7;
+        .RecommendedArticleList{
+            width: 80%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
 }

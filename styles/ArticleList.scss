@@ -1,0 +1,33 @@
+.ArticleList {
+    width: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    .ArticleListBack {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .ArticleListLeft {
+            flex: 8;
+            .LeftBlock {
+                margin-bottom: 50px;
+            }
+        }
+
+        .ArticleListRight {
+           flex: 2;
+           margin-left: 20px;
+           .RightCategory {
+                background-color: #ffffff;
+                display: flex;
+                justify-content: center;
+           }
+           .RightArchive {
+            background-color: #ffffff;
+            margin-top: 50px;
+           }
+        }
+    }
+}

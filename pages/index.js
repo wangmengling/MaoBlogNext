@@ -158,8 +158,15 @@ class Index extends React.Component {
                 </div>
             </div>
           </div>
-          <div className="">
-            <ArticleRow />
+          <div className="MyResume">
+              <div className="MyResumeContent">
+
+              </div>
+          </div>
+          <div className="RecommendedArticle">
+            <div className="RecommendedArticleList">
+              <ArticleRow />
+            </div>
           </div>
         </div>
       </MyLayout>

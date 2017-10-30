@@ -1,32 +1,32 @@
-import { action, observable } from 'mobx'
-
+import React,{ Component } from 'react';
+import { observable ,action,useStrict} from 'mobx';
 let store = null
 
-class AboutStore {
-  @observable lastUpdate = 0
-  @observable light = false
+// class AboutStore {
+//   @observable lastUpdate = 0
+//   @observable light = false
 
-  constructor (isServer, lastUpdate) {
-    this.lastUpdate = lastUpdate
-  }
+//   constructor (isServer, lastUpdate) {
+//     this.lastUpdate = lastUpdate
+//   }
 
-  @action start = () => {
-    this.timer = setInterval(() => {
-      this.lastUpdate = Date.now()
-      this.light = true
-    })
-  }
+//   @action start = () => {
+//     this.timer = setInterval(() => {
+//       this.lastUpdate = Date.now()
+//       this.light = true
+//     })
+//   }
 
-  stop = () => clearInterval(this.timer)
-}
+//   stop = () => clearInterval(this.timer)
+// }
 
-export function initStore (isServer, lastUpdate = Date.now()) {
-  if (isServer) {
-    return new Store(isServer, lastUpdate)
-  } else {
-    if (store === null) {
-      store = new Store(isServer, lastUpdate)
-    }
-    return store
-  }
-}
+// export function initStore (isServer, lastUpdate = Date.now()) {
+//   if (isServer) {
+//     return new Store(isServer, lastUpdate)
+//   } else {
+//     if (store === null) {
+//       store = new Store(isServer, lastUpdate)
+//     }
+//     return store
+//   }
+// }
