@@ -1,0 +1,46 @@
+.ArticleDetail {
+    display: flex;
+    justify-content: center;
+    background-color: #f7f7f7;
+    .ArticleDetailBack {
+        width: 80%;
+        // background: #ffffff;
+        margin-top: 50px;
+        display: flex;
+        .ArticleDetailLeft {
+            flex: 8;
+            padding: 30px;
+            background-color: #fff;
+            margin-right: 30px;
+            .ArticleDetailTitle {
+                font-size: 28px;
+                color: #000;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .ArticleDetailTags {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                max-width: 200px;
+            }
+
+            .ArticleDetailContent {
+                margin-bottom: 20px;
+            }
+
+            .ArticleDetailPage {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 16px;
+                color: #1fb18a;
+                min-height: 600px;
+            }
+        }
+        .ArticleDetailRight {
+            flex: 2;
+        }
+    }
+}

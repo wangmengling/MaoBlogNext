@@ -17,6 +17,11 @@ app.prepare()
     await app.render(ctx.req, ctx.res, '/about', ctx.query)
     ctx.respond = false
   })
+  router.get('/articleDetail', async ctx => {
+    console.log("------");
+    await app.render(ctx.req, ctx.res, '/articleDetail', ctx.query)
+    ctx.respond = false
+  })
   router.get('/articleList', async ctx => {
     console.log("------");
     await app.render(ctx.req, ctx.res, '/articleList', ctx.query)

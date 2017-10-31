@@ -56,7 +56,11 @@ class Index extends React.Component {
           <div className="ResumeContent">
               <div className="RightIcon">
                 {/* <Icon type="bars" /> */}
-                <Button icon="bars" />
+                <Link href="/articleList" prefetch>
+                <Button icon="bars" style={{backgroundColor:"#1fb18a",border:"0px",color:"#fff"}} >
+                    My Blog
+                </Button>
+                </Link>
               </div>
               <div className="HeaderIcon">
                  <img src="./static/images/index/top.jpg" />

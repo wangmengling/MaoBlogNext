@@ -11,7 +11,7 @@ class ArticleRow extends Component {
     }
 
     blogListAction() {
-        Router.push('/articleList')
+        Router.push('/articleDetail')
     }
 
     render(){

@@ -1,0 +1,20 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    cursor: pointer;
+    .logoBack {
+        width: 80%;
+        display: flex;
+        justify-content: flex-start;
+        // .logo {
+        //     margin: 0px auto;
+        //     width: 64px;
+        //     height: 64px;
+        // }
+        .headerTitle {
+            font-size: 30px;
+        }
+    }
+}

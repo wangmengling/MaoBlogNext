@@ -4,12 +4,17 @@ import MyLayout from '../../components/MyLayout.js'
 import ArticleListScss from "styles/ArticleList.scss";
 import Head from '../../components/Head'
 import ArticleRow from "../../components/ArticleRow";
-import { Collapse ,Menu,Icon} from 'antd';
+import { Collapse ,Menu,Icon,Button,Input,Tag,Spin,Switch} from 'antd';
 const Panel = Collapse.Panel;
-const SubMenu = Menu.SubMenu;
+import Category from "../../components/Category";
+
+
 class ArticleList extends Component {
-    
+    state = {
+        loading: false 
+      };
     render() {
+        
         return (
             <MyLayout>
                 <Head />
@@ -29,36 +34,13 @@ class ArticleList extends Component {
                             <div className="LeftBlock">
                                 <ArticleRow />
                             </div>
+                            <div className="LeftBlock">
+                                <Spin size="large" type="info" spinning={this.state.loading}> </Spin>
+                                {/* Loading state：<Switch checked={this.state.loading} onChange={this.toggle} /> */}
+                            </div>
                         </div>
                         <div className="ArticleListRight">
-                            <div className="RightCategory">
-                            <Menu theme="dark" mode='inline' defaultSelectedKeys={['6']}>
-            <SubMenu
-              key="sub1"
-              title={<span><Icon type="user" /><span className="nav-text">User</span></span>}
-            >
-              <Menu.Item key="1">Tom</Menu.Item>
-              <Menu.Item key="2">Bill</Menu.Item>
-              <Menu.Item key="3">Alex</Menu.Item>
-            </SubMenu>
-            <SubMenu
-              key="sub2"
-              title={<span><Icon type="team" /><span className="nav-text">Team</span></span>}
-            >
-              <Menu.Item key="4">Team 1</Menu.Item>
-              <Menu.Item key="5">Team 2</Menu.Item>
-            </SubMenu>
-            <Menu.Item key="6">
-              <span>
-                <Icon type="file" />
-                <span className="nav-text">File</span>
-              </span>
-            </Menu.Item>
-          </Menu>
-                            </div>
-                            <div className="RightArchive">
-
-                            </div>
+                            <Category />
                         </div>
                     </div>
                 </div>

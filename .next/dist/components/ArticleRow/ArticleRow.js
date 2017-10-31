@@ -68,7 +68,7 @@ var ArticleRow = function (_Component) {
     (0, _createClass3.default)(ArticleRow, [{
         key: "blogListAction",
         value: function blogListAction() {
-            _index2.default.push('/articleList');
+            _index2.default.push('/articleDetail');
         }
     }, {
         key: "render",
