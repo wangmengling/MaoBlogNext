@@ -1,7 +1,7 @@
 // import React,{ Component } from 'react';
 import {observable, action, useStrict} from 'mobx';
 import ajax from '../../Config/Apis'; 
-useStrict(true);
+// useStrict(true);
 class ArticleStore {
     @observable articleList = [];
     @observable pageIndex = 0;
@@ -24,13 +24,9 @@ class ArticleStore {
             pageSize: 10
           }
       }).then((response) => {
-        console.log(response);
-        console.log("-----");
-        this.articleList = response.data.data.list;
           this.pageIndex = pageIndex;
           this.articleList = response.data.data.list;
           this.pageTotal = response.data.data.pageTotal;
-          
       })
       .catch((error) => {
         console.log("======");

@@ -84,6 +84,9 @@ var ArticleList = (0, _mobxReact.observer)(_class = function (_Component) {
         };
 
         _this.props.store.getArticleList(_this.props.store.pageIndex);
+        (0, _mobx.autorun)(function () {
+            console.log(_this.props.store.articleList);
+        });
         return _this;
     }
 
@@ -94,83 +97,56 @@ var ArticleList = (0, _mobxReact.observer)(_class = function (_Component) {
             return _react2.default.createElement(_MyLayout2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 25
+                    lineNumber: 30
                 }
             }, _react2.default.createElement(_Head2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 26
+                    lineNumber: 31
                 }
             }), _react2.default.createElement("style", { dangerouslySetInnerHTML: { __html: _ArticleList2.default }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 27
+                    lineNumber: 32
                 }
             }), _react2.default.createElement("div", { className: "ArticleList", __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 28
+                    lineNumber: 33
                 }
             }, _react2.default.createElement("div", { className: "ArticleListBack", __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 29
+                    lineNumber: 34
                 }
             }, _react2.default.createElement("div", { className: "ArticleListLeft", __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 30
+                    lineNumber: 35
                 }
-            }, this.props.store.articleList.map(function (articleModel, idx) {
-                return _react2.default.createElement("div", { className: "LeftBlock", __source: {
+            }, this.props.store.articleList.map(function (value, index, array) {
+                return _react2.default.createElement("div", { className: "LeftBlock", key: index, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 33
+                        lineNumber: 37
                     }
                 }, _react2.default.createElement(_ArticleRow2.default, {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 33
+                        lineNumber: 37
                     }
                 }));
             }), _react2.default.createElement("div", { className: "LeftBlock", __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 36
-                }
-            }, _react2.default.createElement(_ArticleRow2.default, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 37
-                }
-            })), _react2.default.createElement("div", { className: "LeftBlock", __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 39
-                }
-            }, _react2.default.createElement(_ArticleRow2.default, {
-                __source: {
-                    fileName: _jsxFileName,
                     lineNumber: 40
-                }
-            })), _react2.default.createElement("div", { className: "LeftBlock", __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 42
-                }
-            }, _react2.default.createElement(_ArticleRow2.default, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 43
-                }
-            })), _react2.default.createElement("div", { className: "LeftBlock", __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 45
                 }
             }, _react2.default.createElement(_spin2.default, { size: "large", type: "info", spinning: this.state.loading, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 46
+                    lineNumber: 41
                 }
             }, " "))), _react2.default.createElement("div", { className: "ArticleListRight", __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 50
+                    lineNumber: 45
                 }
             }, _react2.default.createElement(_Category2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 51
+                    lineNumber: 46
                 }
             })))));
         }
@@ -180,4 +156,4 @@ var ArticleList = (0, _mobxReact.observer)(_class = function (_Component) {
 }(_react.Component)) || _class;
 
 exports.default = ArticleList;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2FydGljbGVMaXN0L0FydGljbGVMaXN0LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiTXlMYXlvdXQiLCJBcnRpY2xlTGlzdFNjc3MiLCJIZWFkIiwiQXJ0aWNsZVJvdyIsIlBhbmVsIiwiQ2F0ZWdvcnkiLCJvYnNlcnZlciIsIm9ic2VydmFibGUiLCJBcnRpY2xlTGlzdCIsInByb3BzIiwic3RhdGUiLCJsb2FkaW5nIiwic3RvcmUiLCJnZXRBcnRpY2xlTGlzdCIsInBhZ2VJbmRleCIsIl9faHRtbCIsImFydGljbGVMaXN0IiwibWFwIiwiYXJ0aWNsZU1vZGVsIiwiaWR4Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFROzs7O0FBQ2YsQUFBTyxBQUFjOzs7O0FBRXJCLEFBQU87Ozs7QUFDUCxBQUFPLEFBQVU7Ozs7QUFDakIsQUFBTyxBQUFnQjs7OztBQUd2QixBQUFPLEFBQWM7Ozs7QUFDckIsQUFBUTs7QUFDUixBQUFROzs7Ozs7QUFSUjs7O0FBS0EsSUFBTSxRQUFRLG1CQUFkLEFBQXVCOztBQUl2Qjs7SSxBQUVNLGMsQUFETDt5Q0FFRzs7eUJBQUEsQUFBWSxPQUFPOzRDQUFBOztvSkFBQSxBQUNmOztjQURlLEFBSW5CO3FCQUptQixBQUVmLEFBRUksQUFDSztBQURMLEFBQ0o7O2NBSEEsQUFBSyxNQUFMLEFBQVcsTUFBWCxBQUFpQixlQUFlLE1BQUEsQUFBSyxNQUFMLEFBQVcsTUFGNUIsQUFFZixBQUFpRDtlQUN2RDs7Ozs7aUNBSVcsQUFFTDs7bUNBQ0ksQUFBQzs7OEJBQUQ7Z0NBQUEsQUFDSTtBQURKO0FBQUEsYUFBQSxrQkFDSSxBQUFDOzs4QkFBRDtnQ0FESixBQUNJLEFBQ0E7QUFEQTtBQUFBLHlEQUNPLHlCQUF5QixFQUFoQyxBQUFnQyxBQUFFLEFBQVE7OEJBQTFDO2dDQUZKLEFBRUksQUFDQTtBQURBO2dDQUNBLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFDSTtBQURKOytCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFDSTtBQURKOytCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFFTTtBQUZOO29CQUVNLEFBQUssTUFBTCxBQUFXLE1BQVgsQUFBaUIsWUFBakIsQUFBNkIsSUFDM0IsVUFBQSxBQUFDLGNBQUQsQUFBZSxLQUFmO3VDQUF1QixjQUFBLFNBQUssV0FBTCxBQUFlO2tDQUFmO29DQUFBLEFBQTJCO0FBQTNCO2lCQUFBLGtCQUEyQixBQUFDOztrQ0FBRDtvQ0FBbEQsQUFBdUIsQUFBMkI7QUFBQTtBQUFBO0FBSDFELEFBRU0sQUFJRixnQ0FBQSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxBQUFDOzs4QkFBRDtnQ0FQUixBQU1JLEFBQ0ksQUFFSjtBQUZJO0FBQUEsaUNBRUosY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNJO0FBREo7K0JBQ0ksQUFBQzs7OEJBQUQ7Z0NBVlIsQUFTSSxBQUNJLEFBRUo7QUFGSTtBQUFBLGlDQUVKLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFDSTtBQURKOytCQUNJLEFBQUM7OzhCQUFEO2dDQWJSLEFBWUksQUFDSSxBQUVKO0FBRkk7QUFBQSxpQ0FFSixjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxnQ0FBTSxNQUFOLEFBQVcsU0FBUSxNQUFuQixBQUF3QixRQUFPLFVBQVUsS0FBQSxBQUFLLE1BQTlDLEFBQW9EOzhCQUFwRDtnQ0FBQTtBQUFBO2VBakJaLEFBQ0ksQUFlSSxBQUNJLEFBSVIsd0JBQUEsY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNJO0FBREo7K0JBQ0ksQUFBQzs7OEJBQUQ7Z0NBM0JwQixBQUNJLEFBR0ksQUFDSSxBQXFCSSxBQUNJLEFBTXZCO0FBTnVCO0FBQUE7Ozs7O0FBckNGLEEsd0JBOEMxQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJBcnRpY2xlTGlzdC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvdXRvdXUtaW1hYy9Eb2N1bWVudHMvR0lUL01hb0Jsb2dOZXh0In0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2FydGljbGVMaXN0L0FydGljbGVMaXN0LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiTXlMYXlvdXQiLCJBcnRpY2xlTGlzdFNjc3MiLCJIZWFkIiwiQXJ0aWNsZVJvdyIsIlBhbmVsIiwiQ2F0ZWdvcnkiLCJvYnNlcnZlciIsIm9ic2VydmFibGUiLCJhdXRvcnVuIiwiQXJ0aWNsZUxpc3QiLCJwcm9wcyIsInN0YXRlIiwibG9hZGluZyIsInN0b3JlIiwiZ2V0QXJ0aWNsZUxpc3QiLCJwYWdlSW5kZXgiLCJjb25zb2xlIiwibG9nIiwiYXJ0aWNsZUxpc3QiLCJfX2h0bWwiLCJtYXAiLCJ2YWx1ZSIsImluZGV4IiwiYXJyYXkiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVE7Ozs7QUFDZixBQUFPLEFBQWM7Ozs7QUFFckIsQUFBTzs7OztBQUNQLEFBQU8sQUFBVTs7OztBQUNqQixBQUFPLEFBQWdCOzs7O0FBR3ZCLEFBQU8sQUFBYzs7OztBQUNyQixBQUFROztBQUNSLEFBQVEsQUFBVzs7Ozs7O0FBUm5COzs7QUFLQSxJQUFNLFFBQVEsbUJBQWQsQUFBdUI7O0FBSXZCOztJQUVNLEEsY0FETCxBO3lDQUVHOzt5QkFBQSxBQUFZLE9BQU87NENBQUE7O29KQUFBLEFBQ2Y7O2NBRGUsQUFPbkI7cUJBUG1CLEFBRWYsQUFLSSxBQUNLO0FBREwsQUFDSjs7Y0FOQSxBQUFLLE1BQUwsQUFBVyxNQUFYLEFBQWlCLGVBQWUsTUFBQSxBQUFLLE1BQUwsQUFBVyxNQUEzQyxBQUFpRCxBQUNqRDsyQkFBUSxZQUFNLEFBQ1Y7b0JBQUEsQUFBUSxJQUFJLE1BQUEsQUFBSyxNQUFMLEFBQVcsTUFBdkIsQUFBNkIsQUFDaEM7QUFMYyxBQUdmO2VBR047Ozs7O2lDQU1XLEFBRUw7O21DQUNJLEFBQUM7OzhCQUFEO2dDQUFBLEFBQ0k7QUFESjtBQUFBLGFBQUEsa0JBQ0ksQUFBQzs7OEJBQUQ7Z0NBREosQUFDSSxBQUNBO0FBREE7QUFBQSx5REFDTyx5QkFBeUIsRUFBaEMsQUFBZ0MsQUFBRSxBQUFROzhCQUExQztnQ0FGSixBQUVJLEFBQ0E7QUFEQTtnQ0FDQSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0s7QUFETDtvQkFDSyxBQUFLLE1BQUwsQUFBVyxNQUFYLEFBQWlCLFlBQWpCLEFBQTZCLElBQUksVUFBQSxBQUFDLE9BQUQsQUFBTyxPQUFQLEFBQWEsT0FBVSxBQUNqRDt1Q0FBTyxjQUFBLFNBQUssV0FBTCxBQUFlLGFBQVksS0FBM0IsQUFBZ0M7a0NBQWhDO29DQUFBLEFBQXVDO0FBQXZDO2lCQUFBLGtCQUF1QyxBQUFDOztrQ0FBRDtvQ0FBOUMsQUFBTyxBQUF1QyxBQUNqRDtBQURpRDtBQUFBO0FBRjFELEFBQ0ssQUFJRCxnQ0FBQSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxnQ0FBTSxNQUFOLEFBQVcsU0FBUSxNQUFuQixBQUF3QixRQUFPLFVBQVUsS0FBQSxBQUFLLE1BQTlDLEFBQW9EOzhCQUFwRDtnQ0FBQTtBQUFBO2VBUFosQUFDSSxBQUtJLEFBQ0ksQUFJUix3QkFBQSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxBQUFDOzs4QkFBRDtnQ0FqQnBCLEFBQ0ksQUFHSSxBQUNJLEFBV0ksQUFDSSxBQU12QjtBQU51QjtBQUFBOzs7OztBQWhDRixBLHdCQXlDMUI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiQXJ0aWNsZUxpc3QuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3V0b3V1LWltYWMvRG9jdW1lbnRzL0dJVC9NYW9CbG9nTmV4dCJ9
