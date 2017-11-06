@@ -12,26 +12,6 @@ const handle = app.getRequestHandler()
 app.prepare()
 .then(() => {
   const server = new Koa()
-<<<<<<< HEAD
-
-  // server.use(cors());
-  server.use(cors({
-    origin: function(ctx) {
-      if (ctx.url === '/test') {
-        return false;
-      }
-      return '*';
-    },
-    exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
-    maxAge: 5,
-    credentials: true,
-    allowMethods: ['GET', 'POST', 'DELETE'],
-    allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
-  }));
-
-
-=======
->>>>>>> 37ccf64e075bc0a2072554e6fdd79023a15ed0e3
   const router = new Router()
 
   router.get('/about', async ctx => {
