@@ -8,8 +8,8 @@ import { Collapse ,Menu,Icon,Button,Input,Tag,Spin,Switch} from 'antd';
 const Panel = Collapse.Panel;
 import Category from "../../components/Category";
 import {observer} from 'mobx-react';
-import {observable, action, useStrict} from 'mobx';
-useStrict(true);
+import {observable} from 'mobx';
+// useStrict(true);
 @observer
 class ArticleList extends Component {
     constructor(props) {

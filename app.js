@@ -1,7 +1,6 @@
 const Koa = require('koa')
 const next = require('next')
 const Router = require('koa-router')
-const cors = require('koa2-cors');
 
 const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
@@ -13,10 +12,6 @@ const handle = app.getRequestHandler()
 app.prepare()
 .then(() => {
   const server = new Koa()
-
-  server.use(cors());
-
-
   const router = new Router()
 
   router.get('/about', async ctx => {

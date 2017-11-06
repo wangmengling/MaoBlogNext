@@ -3,14 +3,14 @@ import {observable, action, useStrict} from 'mobx';
 import ajax from '../../Config/Apis'; 
 useStrict(true);
 class ArticleStore {
-    @observable articleList = new Array(0);
+    @observable articleList = [];
     @observable pageIndex = 0;
     @observable pageSize = 10;
     @observable pageTotal = 0;
     @observable deleteData = null;
-    constructor() {
+    // constructor() {
       
-    }
+    // }
   
     @action  getArticleList(pageIndex) {
       // this.pageIndex = pageIndex;
@@ -24,13 +24,17 @@ class ArticleStore {
             pageSize: 10
           }
       }).then((response) => {
+        console.log(response);
+        console.log("-----");
+        this.articleList = response.data.data.list;
           this.pageIndex = pageIndex;
           this.articleList = response.data.data.list;
-          console.log(response);
           this.pageTotal = response.data.data.pageTotal;
+          
       })
       .catch((error) => {
-         
+        console.log("======");
+        console.log(error);
       });
     }
 
@@ -62,7 +66,7 @@ class ArticleStore {
       const token = localStorage.getItem('token');
       ajax({
           url: '/api/v1/article/deleteArticle',
-          method: 'POST',
+          method: 'GET',
           data:{
             token: token,
             articleId:id
