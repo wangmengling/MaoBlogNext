@@ -8,17 +8,22 @@ import { Collapse ,Menu,Icon,Button,Input,Tag,Spin,Switch} from 'antd';
 const Panel = Collapse.Panel;
 import Category from "../../components/Category";
 import {observer} from 'mobx-react';
-import {observable, action, useStrict} from 'mobx';
-useStrict(true);
+import {observable,autorun} from 'mobx';
+// useStrict(true);
 @observer
 class ArticleList extends Component {
     constructor(props) {
 		super(props);
         this.props.store.getArticleList(this.props.store.pageIndex)
+        autorun(() => {
+            console.log(this.props.store.articleList);
+        });
 	}
     state = {
         loading: false 
       };
+
+    
     render() {
         
         return (
@@ -28,20 +33,10 @@ class ArticleList extends Component {
                 <div className="ArticleList">
                     <div className="ArticleListBack">
                         <div className="ArticleListLeft">
-
-                            { this.props.store.articleList.map(
-                                (articleModel, idx) => <div className="LeftBlock"><ArticleRow /></div>
-                            ) }
-                            
-                            <div className="LeftBlock">
-                                <ArticleRow />
-                            </div>
-                            <div className="LeftBlock">
-                                <ArticleRow />
-                            </div>
-                            <div className="LeftBlock">
-                                <ArticleRow />
-                            </div>
+                            {this.props.store.articleList.map((value,index,array) => { 
+                                    return <div className="LeftBlock" key={index}><ArticleRow /></div>;
+                                })
+                            }
                             <div className="LeftBlock">
                                 <Spin size="large" type="info" spinning={this.state.loading}> </Spin>
                                 {/* Loading state：<Switch checked={this.state.loading} onChange={this.toggle} /> */}

@@ -10,6 +10,9 @@ export default function apis({ url, method, ...others }) {
   return axios({
     url: host + url,
     method: method,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+  },
     ...others
   });
 }
