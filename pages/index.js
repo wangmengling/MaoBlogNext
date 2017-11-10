@@ -36,7 +36,7 @@ import ReactDOM from 'react-dom';
 import { DatePicker, message, Button, Icon } from 'antd';
 // import 'antd/dist/antd.css';
 import indexScss from "styles/index.scss";
-import ArticleRow from "../components/ArticleRow"
+import ArticleRow from "../components/ArticleRow/ArticleRow"
 class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -169,7 +169,7 @@ class Index extends React.Component {
           </div>
           <div className="RecommendedArticle">
             <div className="RecommendedArticleList">
-              <ArticleRow />
+              {/* <ArticleRow /> */}
             </div>
           </div>
         </div>

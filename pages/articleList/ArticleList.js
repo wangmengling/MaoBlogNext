@@ -3,7 +3,7 @@ import MyLayout from '../../components/MyLayout.js'
 // import 'antd/dist/antd.css';
 import ArticleListScss from "styles/ArticleList.scss";
 import Head from '../../components/Head'
-import ArticleRow from "../../components/ArticleRow";
+import ArticleRow from "../../components/ArticleRow/ArticleRow";
 import { Collapse ,Menu,Icon,Button,Input,Tag,Spin,Switch} from 'antd';
 const Panel = Collapse.Panel;
 import Category from "../../components/Category";
@@ -34,7 +34,7 @@ class ArticleList extends Component {
                     <div className="ArticleListBack">
                         <div className="ArticleListLeft">
                             {this.props.store.articleList.map((value,index,array) => { 
-                                    return <div className="LeftBlock" key={index}><ArticleRow /></div>;
+                                    return <div className="LeftBlock" key={index}><ArticleRow article={value} /></div>;
                                 })
                             }
                             <div className="LeftBlock">

@@ -10,46 +10,40 @@ class ArticleRow extends Component {
         this.blogListAction = this.blogListAction.bind(this);
     }
 
+    componentWillMount(){
+    }
+
     blogListAction() {
         Router.push('/articleDetail')
     }
 
     render(){
+        let date = new Date();
+        date.setTime(this.props.article.time);
         return (
             <div className="ArticleRowRoot">
                 <style dangerouslySetInnerHTML={{ __html: ArticleRowScss }} />
                 <div className="ArticleRowHeader">
                     <div className="ArticleRowHeaderCategory">
-                        <Icon type="tag" /> React
+                        <Icon type="tag" /> {this.props.article.category}
                     </div>
                     <div className="ArticleRowHeaderTime">
-                    <Icon type="schedule" /> 14/09/12
+                    <Icon type="schedule" /> &nbsp;
+                    {date.toLocaleDateString()}
                     </div>
                     <div className="ArticleRowHeaderReadNum">
-                    <Icon type="message" /> 5
+                    <Icon type="message" /> {this.props.article.view}
                     </div>
                 </div>
                 <div className="ArticleRowTitle">
-                    我的第一篇文章
+                    {this.props.article.title}
                 </div>
                 <div className="ArticleRowContent">
                     <div className="ArticleRowContentImage">
                         
                     </div>
                     <div className="ArticleRowContentDescription">
-                    当前市场参考价10元/TKC；
-  输入数量后会根据集市的实时行情自动计算出最后的售出价格；
-  您也可以到【集市】中自定义售出价格，等待交易；当前市场参考价10元/TKC；
-  输入数量后会根据集市的实时行情自动计算出最后的售出价格；
-  您也可以到【集市】中自定义售出价格，等待交易；当前市场参考价10元/TKC；
-  输入数量后会根据集市的实时行情自动计算出最后的售出价格；
-  您也可以到【集市】中自定义售出价格，等待交易；当前市场参考价10元/TKC；
-  输入数量后会根据集市的实时行情自动计算出最后的售出价格；
-  您也可以到【集市】中自定义售出价格，等待交易；当前市场参考价10元/TKC；
-  输入数量后会根据集市的实时行情自动计算出最后的售出价格；
-  您也可以到【集市】中自定义售出价格，等待交易；当前市场参考价10元/TKC；
-  输入数量后会根据集市的实时行情自动计算出最后的售出价格；
-  您也可以到【集市】中自定义售出价格，等待交易；
+                        {this.props.article.summary}
                     </div>
                 </div>
                 <div className="ArticleRowMoreButton">
